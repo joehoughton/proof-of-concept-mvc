@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace proof_of_concept_mvc.Controllers
+﻿namespace proof_of_concept_mvc.Controllers
 {
+    using System.Web.Mvc;
+
+    using proof_of_concept.Application.People;
+
     public class HomeController : Controller
     {
+        private readonly IPeopleService _peopleService;
+
+        public HomeController(IPeopleService peopleService)
+        {
+            _peopleService = peopleService;
+        }
+
         public ActionResult Index()
         {
+            var people = _peopleService.All();
+
             return View();
         }
 
