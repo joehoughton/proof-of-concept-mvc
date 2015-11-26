@@ -1,24 +1,57 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-color: #E4E4E4;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
+/* Custom Container - _Layout.cshtml */
+.custom-container {
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+/* Sign In */
+#sign-in {
+    position: relative;
+    max-width: 400px;
+    padding: 19px 29px 29px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+    #sign-in h2 {
+        text-align: center;
+    }
+
+    #sign-in label {
+        font-weight: normal;
+    }
+
+#sign-in-button {
+    width: 100%;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    border-radius: 0 !important;
+    background: #6C6C6C;
+    color: white;
 }
+
+#error-message {
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #6C6C6C;
+    color: white;
+    padding: 6px;
+}
+
+    #error-message i {
+        font-size: 15px;
+    }
+
+    #error-message ul {
+        text-align: center;
+        list-style: none outside none;
+        margin-bottom: 0;
+    }

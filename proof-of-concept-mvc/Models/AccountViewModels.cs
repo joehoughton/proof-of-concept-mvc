@@ -49,9 +49,9 @@ namespace proof_of_concept_mvc.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [StringLength(254, ErrorMessage = "Username length Should be less than 254 characters.")]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

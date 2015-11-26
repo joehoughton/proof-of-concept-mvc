@@ -1,20 +1,21 @@
 ﻿namespace proof_of_concept_mvc
-{
+    {
     using System.Web.Optimization;
 
     public class BundleConfig
-    {
-        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
-        public static void RegisterBundles(BundleCollection bundles)
         {
+        public static void RegisterBundles(BundleCollection bundles)
+            {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate.min.js",
+                        "~/Scripts/jquery.validate.unobtrusive.js"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                     "~/Scripts/Account/error-alert.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
@@ -23,8 +24,9 @@
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css"));
+            }
         }
     }
-}
