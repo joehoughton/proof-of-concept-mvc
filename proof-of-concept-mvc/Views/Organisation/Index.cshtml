@@ -1,21 +1,12 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
 }
 
-<div class="container">
+@section HeaderContent { @Html.Partial("_HeaderPartial") }
 
-    <div id="header-content">
-        @Html.Partial("_HeaderPartial")
-    </div>
+@section SideBar { @Html.Partial("_SidebarPartial")}
 
-    <div id="main-content">
-        <div class="col-md-3 sidebar">
-            @Html.Partial("_SidebarPartial")
-        </div>
-
-        <div class="col-md-9" id="manage-content">
-            
-        </div>
-    </div>
-</div>
+@section ManageContent {
+    <h2>hello</h2>
+}

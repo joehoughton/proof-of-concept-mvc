@@ -8,8 +8,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <div id="header-content" class="container">
+        @RenderSection("HeaderContent", required: false)
+    </div>
 
-    <div class="custom-container">
+    <div id="error-content">
+        
+    </div>
+
+    <div id="main-content">
         @RenderBody()
     </div>
 

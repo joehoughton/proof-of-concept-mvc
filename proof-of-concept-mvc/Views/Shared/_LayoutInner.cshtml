@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeaderContent { @RenderSection("HeaderContent", required: false) }
+
+<div class="container">
+    <div id="main-content">
+        <div class="col-md-3">
+            @RenderSection("Sidebar", required: false)
+        </div>
+
+        <div class="col-md-9" id="manage-content">
+            @RenderSection("ManageContent", required: true)
+        </div>
+    </div>
+</div>
