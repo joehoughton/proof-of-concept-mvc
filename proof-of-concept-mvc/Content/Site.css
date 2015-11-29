@@ -141,6 +141,12 @@ h1, h2, h3, h4, h5, h6, p {
     height: 35em;
 }
 
+@media only screen and (max-width : 768px) {
+    .sidebar {
+        height: 20em;
+    }
+}
+
 .sidebar a {
     color: #000000;
     text-decoration: none;
@@ -165,6 +171,12 @@ h1, h2, h3, h4, h5, h6, p {
     padding-top: 20px;
 }
 
+@media only screen and (max-width : 768px) {
+    #manage-content {
+        height: auto;
+    }
+}
+
 /* Organisation Detail */
 #organisation-detail .form-control {
     border: 0;
@@ -173,3 +185,6 @@ h1, h2, h3, h4, h5, h6, p {
 #organisation-detail span {
     padding-top: 7px;
 }
+
+
+

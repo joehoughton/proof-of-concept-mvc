@@ -1,4 +1,4 @@
-﻿namespace proof_of_concept_mvc.Controllers
+﻿namespace proof_of_concept_mvc.Controllers.Account
 {
     using System.Linq;
     using System.Threading.Tasks;

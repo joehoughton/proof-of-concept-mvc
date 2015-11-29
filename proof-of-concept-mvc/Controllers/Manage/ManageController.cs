@@ -1,4 +1,4 @@
-﻿namespace proof_of_concept_mvc.Controllers
+﻿namespace proof_of_concept_mvc.Controllers.Manage
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -7,6 +7,7 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
+    using proof_of_concept_mvc.Controllers.Account;
     using proof_of_concept_mvc.Models;
 
     [Authorize]

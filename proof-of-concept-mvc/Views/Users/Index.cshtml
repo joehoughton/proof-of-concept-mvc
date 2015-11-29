@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInner.cshtml"; // render sections inside _LayoutInner
+}
+
+@section HeaderContent { @Html.Partial("_HeaderPartial") }
+
+@section SideBar { @Html.Partial("_SidebarPartial")}
+
+@section ManageContent {
+
+    <div class="col-sm-11 col-sm-offset-1">
+        <form class="form-horizontal" id="user-detail">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Full Name</label>
+                        <div class="col-sm-9 col-sm-offset-1">
+                            <input type="text" class="form-control" id="name" placeholder="Full Name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-offset-2 control-label">Contact</label>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="form-group">
+                        <label for="email" class="col-md-2 col-sm-4 control-label">Email</label>
+                        <div class="col-md-10 col-sm-8">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <br><br>
+                        <label for="email-alerts" class="col-sm-3 col-sm-offset-5 control-label">Email Alerts</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="email-alerts" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone" class="col-md-2 col-sm-4 control-label">Telephone</label>
+                        <div class="col-md-10 col-sm-8">
+                            <input type="tel" class="form-control" id="telephone" placeholder="Telephone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile" class="col-md-2 col-sm-4 control-label">Mobile</label>
+                        <div class="col-md-10 col-sm-8">
+                            <input type="tel" class="form-control" id="mobile" placeholder="Mobile">
+                        </div>
+                        <br><br>
+                        <label for="sms-alerts" class="col-sm-3 col-sm-offset-5 control-label">Mobile Alerts</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="sms-alerts" placeholder="Mobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+}

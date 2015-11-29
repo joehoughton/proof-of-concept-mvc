@@ -1,4 +1,4 @@
-﻿namespace proof_of_concept_mvc.Controllers
+﻿namespace proof_of_concept_mvc.Controllers.Organisation
 {
     using System.Web.Mvc;
     using Microsoft.AspNet.Identity;
