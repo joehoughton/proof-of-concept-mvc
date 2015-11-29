@@ -6,21 +6,21 @@
     public static class SelectedMenuItem
     {
         public static MvcHtmlString MenuItem(this HtmlHelper htmlHelper, string action, string controller)
-            {
+        {
             var className = "";
         
             var routeData = htmlHelper.ViewContext.RouteData;
             var currentAction = routeData.GetRequiredString("action");
             var currentController = routeData.GetRequiredString("controller");
 
-            if (string.Equals(currentAction, action, StringComparison.OrdinalIgnoreCase) &&
-                string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase))
+            // add string.Equals(currentAction, action, StringComparison.OrdinalIgnoreCase) && to check for controller action
+            if (string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase))
             {
                 className = "active";
             }
 
             return MvcHtmlString.Create(className);
-            }
+        }
 
     }
 }

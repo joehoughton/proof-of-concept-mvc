@@ -20,7 +20,7 @@ if ($(".validation-summary-errors")[0]) {
   $('#error-message').css('display', 'block'); // show error message
 }
 
-// get all form erros and add them to the error-message div
+// get all form errors and add them to the error-message div
 $("form").bind("invalid-form.validate", function (evt, validator) {
   $('#error-message').css('display', 'block'); // remove display none to make visible
 

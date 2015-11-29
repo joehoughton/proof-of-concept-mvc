@@ -1,4 +1,5 @@
 ﻿@using proof_of_concept.Domain.Users.Dto
+@using proof_of_concept_mvc.Helper
 @{
     Layout = "~/Views/Shared/_LayoutInner.cshtml"; // render sections inside _LayoutInner
 }
@@ -6,18 +7,20 @@
 
 @section HeaderContent { @Html.Partial("_HeaderPartial") }
 
-@section SideBar { @Html.Partial("_SidebarPartial")}
+@section SideBar { @Html.Partial("_SidebarPartial") }
 
 @section ManageContent {
-
     <div class="col-sm-11 col-sm-offset-1">
+        <div id="error-message" style="display: none">
+            <ul>@Html.BootstrapValidationSummary(true, "Warning:")</ul>
+        </div>
         @using (Html.BeginForm("Edit", "Users", FormMethod.Post, new { @class = "form-horizontal", id = "user-detail" }))
-        {
+            {
             @Html.AntiForgeryToken()
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-offset-2 control-label">Name</label>
+                        @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 col-sm-offset-2 control-label" })
                     </div>
                 </div>
                 <div class="col-sm-9">
@@ -28,9 +31,7 @@
                     </div>
                 </div>
             </div>
-
-            <hr/>
-
+            <hr />
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group">
@@ -39,39 +40,37 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="form-group">
-                        <label for="email" class="col-md-2 col-sm-4 control-label">Email</label>
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-sm-4 control-label" })
                         <div class="col-md-10 col-sm-8">
                             @Html.TextBoxFor(m => m.Email, new { type = "email", @class = "form-control", id = "email", placeholder = "Email" })
                         </div>
-                        <br><br>
-                        <label for="email-alerts" class="col-sm-4 col-sm-offset-6 control-label">Email Alerts</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-sm-offset-6 control-label">Email Alerts</label>
                         <div class="col-sm-2">
                             <div class="toggles">
-                                <!-- <input type="checkbox" name="checkbox1" id="email-alerts" class="ios-toggle" checked/> -->
-                                <input type="checkbox" name="EmailNotification" value="true" class="ios-toggle" id="email-notification" @Html.Raw((Model.EmailNotification) ? "checked=\"checked\"" : "")/>
+                                <input type="checkbox" name="EmailNotification" value="true" class="ios-toggle" id="email-notification" @Html.Raw((Model.EmailNotification) ? "checked=\"checked\"" : "") />
                                 <label for="email-notification" class="checkbox-label"></label>
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label for="telephone" class="col-md-2 col-sm-4 control-label">Telephone</label>
+                        @Html.LabelFor(m => m.Telephone, new { @class = "col-md-2 col-sm-4 control-label" })
                         <div class="col-md-10 col-sm-8">
                             @Html.TextBoxFor(m => m.Telephone, new { type = "tel", @class = "form-control", id = "telephone", placeholder = "Telephone" })
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label for="mobile" class="col-md-2 col-sm-4 control-label">Mobile</label>
+                        @Html.LabelFor(m => m.Mobile, new { @class = "col-md-2 col-sm-4 control-label" })
                         <div class="col-md-10 col-sm-8">
                             @Html.TextBoxFor(m => m.Mobile, new { type = "tel", @class = "form-control", id = "mobile", placeholder = "Mobile" })
                         </div>
-                        <br><br>
-                        <label for="sms-alerts" class="col-sm-4 col-sm-offset-6 control-label">Mobile Alerts</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-sm-offset-6 control-label">Mobile Alerts</label>
                         <div class="col-sm-2">
                             <div class="toggles">
-                                <!-- <input type="checkbox" name="checkbox1" id="sms-alerts" class="ios-toggle"/>-->
-                                <input type="checkbox" name="SmsNotification" value="true" class="ios-toggle" id="sms-notification" @Html.Raw((Model.SmsNotification) ? "checked=\"checked\"" : "")/>
+                                <input type="checkbox" name="SmsNotification" value="true" class="ios-toggle" id="sms-notification" @Html.Raw((Model.SmsNotification) ? "checked=\"checked\"" : "") />
                                 <label for="sms-notification" class="checkbox-label"></label>
                             </div>
                         </div>
@@ -79,14 +78,15 @@
                 </div>
             </div>
             <div class="row">
-                <br><br>
+                <br>
                 <div class="col-xs-12">
                     <div class="form-group" style="float: right; padding-right: 15px;">
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger", style = "display: none" })
                         <button type="submit" class="btn btn-primary" value="Index">Apply</button>
-                        <a href="" id="undo">Cancel</a>
+                        <a href="" id="cancel">Cancel</a>
                     </div>
                 </div>
             </div>
-        }
+            }
     </div>
 }

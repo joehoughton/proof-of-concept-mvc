@@ -7,6 +7,23 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Buttons */
+.btn {
+    background-color: #6D6D6D;
+}
+
+.btn-primary:hover{
+    color: #fff;
+    background-color: #4a4a4a;
+    border-color: #4a4a4a;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #6D6D6D;
+    border-color: #6D6D6D;
+}
+
 /* Custom Container - _Layout.cshtml */
 .custom-container {
     padding-left: 15px;
@@ -186,6 +203,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 #organisation-detail span {
     padding-top: 7px;
+}
+
+a#cancel {
+    color: #878787;
 }
 
 /* IOS Toggle */

@@ -39,7 +39,7 @@
                 personViewModel.Id = User.Identity.GetUserId();
                 _userService.UpdateUserDetails(personViewModel);
             } 
-            catch (Exception e)
+            catch (Exception)
             {
                 ViewBag.ErrorMessage = "Failed to update your details. Please try again.";
                 return View("Index", personViewModel);
