@@ -9,7 +9,6 @@
     {
         private readonly SparebedsContext _context;
 
-        
         public OrganisationRepository(SparebedsContext context)
         {
             _context = context;
