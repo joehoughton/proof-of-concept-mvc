@@ -4,8 +4,8 @@
     <section id="sidebar-content">
         <ul class="account-sidebar">
             <li class="@Html.MenuItem("Index", "Organisation")"><a href="@Url.Action("Index", "Organisation")"><i class="fa fa-sitemap"></i><h4>Organisation</h4></a></li>
-            <li class="@Html.MenuItem("", "")"><a href=""><i class="fa fa-bed"></i><h4>Bed Types</h4></a></li>
-            <li class="@Html.MenuItem("", "")"><a href=""><i class="fa fa-users"></i><h4>Users</h4></a></li>
+            <li class="disabled @Html.MenuItem("", "")"><a href=""><i class="fa fa-bed"></i><h4>Bed Types</h4></a></li>
+            <li class="disabled @Html.MenuItem("", "")"><a href=""><i class="fa fa-users"></i><h4>Users</h4></a></li>
             <li class="@Html.MenuItem("Index", "Users")"><a href="@Url.Action("Index", "Users")"><i class="fa fa-cog"></i><h4>My Details</h4></a></li>
         </ul>
     </section>

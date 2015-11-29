@@ -7,7 +7,7 @@
     {
         public static MvcHtmlString MenuItem(this HtmlHelper htmlHelper, string action, string controller)
             {
-            var className = "disabled";
+            var className = "";
         
             var routeData = htmlHelper.ViewContext.RouteData;
             var currentAction = routeData.GetRequiredString("action");
