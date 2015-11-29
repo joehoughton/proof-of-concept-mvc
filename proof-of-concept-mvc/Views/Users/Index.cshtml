@@ -16,14 +16,12 @@
             {
             @Html.AntiForgeryToken()
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                     <div class="form-group">
-                        @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 col-sm-offset-2 control-label" })
-                    </div>
-                </div>
-                <div class="col-sm-9">
-                    <div class="form-group">
-                        <div class="col-md-12">
+                        <div class="col-sm-3">
+                            @Html.LabelFor(m => m.Name, new { @class = "pull-left col-sm-offset-2 control-label" })
+                        </div>
+                        <div class="col-sm-9">
                             @Html.TextBoxFor(m => m.Name, new { type = "text", @class = "form-control", id = "fullname", placeholder = "Full Name" })
                         </div>
                     </div>
