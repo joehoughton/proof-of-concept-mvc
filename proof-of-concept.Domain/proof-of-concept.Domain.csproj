@@ -82,9 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacDomainModule.cs" />
+    <Compile Include="Users\IUserRepository.cs" />
     <Compile Include="Organisation\Dto\OrganisationDto.cs" />
     <Compile Include="Organisation\IOrganisationRepository.cs" />
     <Compile Include="Organisation\OrganisationRepository.cs" />
+    <Compile Include="Users\UserRepository.cs" />
+    <Compile Include="Users\Dto\UserDetailDto.cs" />
     <Compile Include="Users\Models\AspNetRole.cs" />
     <Compile Include="Users\Models\AspNetUser.cs" />
     <Compile Include="Users\Models\AspNetUserClaim.cs" />

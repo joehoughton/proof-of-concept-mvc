@@ -189,6 +189,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* IOS Toggle */
+/* Active toggle colour for production: #13bf11 */
 .toggles {
     width: 45px;
     text-align: center;
@@ -260,9 +261,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .ios-toggle:checked + .checkbox-label {
-    -webkit-box-shadow: inset 0 0 0 20px #13bf11,0 0 0 2px #13bf11;
-    -moz-box-shadow: inset 0 0 0 20px #13bf11,0 0 0 2px #13bf11;
-    box-shadow: inset 0 0 0 20px #13bf11,0 0 0 2px #13bf11;
+    -webkit-box-shadow: inset 0 0 0 20px #A4A4A4,0 0 0 2px #A4A4A4;
+    -moz-box-shadow: inset 0 0 0 20px #A4A4A4,0 0 0 2px #A4A4A4;
+    box-shadow: inset 0 0 0 20px #A4A4A4,0 0 0 2px #A4A4A4;
 }
 
 .ios-toggle:checked + .checkbox-label:before {
@@ -277,18 +278,3 @@ h1, h2, h3, h4, h5, h6, p {
     width: 26px;
 }
 
-#checkbox1 + .checkbox-label {
-    -webkit-box-shadow: inset 0 0 0 0 #13bf11,0 0 0 2px #dddddd;
-    -moz-box-shadow: inset 0 0 0 0 #13bf11,0 0 0 2px #dddddd;
-    box-shadow: inset 0 0 0 0 #13bf11,0 0 0 2px #dddddd;
-}
-
-#checkbox1:checked + .checkbox-label {
-    -webkit-box-shadow: inset 0 0 0 18px #13bf11,0 0 0 2px #13bf11;
-    -moz-box-shadow: inset 0 0 0 18px #13bf11,0 0 0 2px #13bf11;
-    box-shadow: inset 0 0 0 18px #13bf11,0 0 0 2px #13bf11;
-}
-
-#checkbox1:checked + .checkbox-label:after {
-    color: #13bf11;
-}

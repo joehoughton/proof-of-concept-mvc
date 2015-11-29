@@ -2,6 +2,7 @@
 {
     using global::Autofac;
     using proof_of_concept.Application.Organisation;
+    using proof_of_concept.Application.Users;
 
     public class AutofacWebModule : Module
     {
@@ -13,6 +14,7 @@
             .InstancePerLifetimeScope();
 
             builder.RegisterType<OrganisationService>().As<IOrganisationService>().InstancePerRequest();
+            builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
 
             base.Load(builder);
         }

@@ -77,6 +77,8 @@
     <Compile Include="Organisation\IOrganisationService.cs" />
     <Compile Include="Organisation\OrganisationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\IUserService.cs" />
+    <Compile Include="Users\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
