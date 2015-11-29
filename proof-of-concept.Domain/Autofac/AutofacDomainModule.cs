@@ -1,13 +1,13 @@
 ﻿namespace proof_of_concept.Domain.Autofac
-{
+    {
     using System.Configuration;
     using global::Autofac;
-    using proof_of_concept.Domain.Models;
+    using proof_of_concept.Domain.Data;
 
     public class AutofacDomainModule : Module
-    {
-        protected override void Load(ContainerBuilder builder)
         {
+        protected override void Load(ContainerBuilder builder)
+            {
             builder.RegisterType<SparebedsContext>()
                    .As<SparebedsContext>()
                    .WithParameter("connectionString", ConfigurationManager.ConnectionStrings["Sparebeds"].ConnectionString)
@@ -19,6 +19,6 @@
                    .InstancePerLifetimeScope();
 
             base.Load(builder);
+            }
         }
     }
-}

@@ -74,8 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacApplicationModule.cs" />
-    <Compile Include="People\IPeopleService.cs" />
-    <Compile Include="People\PeopleService.cs" />
+    <Compile Include="Organisation\IOrganisationService.cs" />
+    <Compile Include="Organisation\OrganisationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@
     <ProjectGuid>{B85D5D9C-33F6-4840-8501-A5BF4E8765BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>proof_of_concept.Models</RootNamespace>
+    <RootNamespace>proof_of_concept.Domain</RootNamespace>
     <AssemblyName>proof-of-concept.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -82,18 +82,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacDomainModule.cs" />
-    <Compile Include="People\Models\People.cs" />
+    <Compile Include="Organisation\Dto\OrganisationDto.cs" />
+    <Compile Include="Organisation\IOrganisationRepository.cs" />
+    <Compile Include="Organisation\OrganisationRepository.cs" />
     <Compile Include="Users\Models\AspNetRole.cs" />
     <Compile Include="Users\Models\AspNetUser.cs" />
     <Compile Include="Users\Models\AspNetUserClaim.cs" />
     <Compile Include="Users\Models\AspNetUserLogin.cs" />
-    <Compile Include="Data\Mapping\AspNetRoleMap.cs" />
-    <Compile Include="Data\Mapping\AspNetUserClaimMap.cs" />
-    <Compile Include="Data\Mapping\AspNetUserLoginMap.cs" />
-    <Compile Include="Data\Mapping\AspNetUserMap.cs" />
+    <Compile Include="Users\Mapping\AspNetRoleMap.cs" />
+    <Compile Include="Users\Mapping\AspNetUserClaimMap.cs" />
+    <Compile Include="Users\Mapping\AspNetUserLoginMap.cs" />
+    <Compile Include="Users\Mapping\AspNetUserMap.cs" />
+    <Compile Include="Organisation\Mappings\OrganisationMap.cs" />
+    <Compile Include="Organisation\Mappings\OrganisationTypeMap.cs" />
+    <Compile Include="Users\Mapping\UserDetailMap.cs" />
+    <Compile Include="Organisation\Models\Organisation.cs" />
+    <Compile Include="Organisation\Models\OrganisationType.cs" />
     <Compile Include="Data\SparebedsContext.cs" />
-    <Compile Include="People\IPeopleRepository.cs" />
-    <Compile Include="People\PeopleRepository.cs" />
+    <Compile Include="Users\Models\UserDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

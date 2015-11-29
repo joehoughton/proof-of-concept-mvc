@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p {
 /* Sign In */
 #sign-in {
     position: relative;
-    max-width: 400px;
+    max-width: 360px;
     padding: 19px 29px 29px;
     margin: 0 auto;
     background-color: #fff;
@@ -116,6 +116,9 @@ h1, h2, h3, h4, h5, h6, p {
     color: black;
 }
 
+.disabled {
+    opacity: 0.4;
+}
 /* Sidebar */
 .account-sidebar {
     margin: 0 !important;
@@ -150,7 +153,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Main Content */
-#main-content .col-md-3 {
+#main-content .col-sm-3 {
     padding: 0;
 }
 
@@ -159,4 +162,14 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     background-color: #ffffff;
     height: 35em;
+    padding-top: 20px;
+}
+
+/* Organisation Detail */
+#organisation-detail .form-control {
+    border: 0;
+}
+
+#organisation-detail span {
+    padding-top: 7px;
 }

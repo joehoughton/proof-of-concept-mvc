@@ -1,9 +1,7 @@
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
-
-namespace proof_of_concept.Domain.Models.Mapping
+namespace proof_of_concept.Domain.Users.Mapping
 {
-    using proof_of_concept.Models.Users.Models;
+    using System.Data.Entity.ModelConfiguration;
+    using proof_of_concept.Domain.Users.Models;
 
     public class AspNetRoleMap : EntityTypeConfiguration<AspNetRole>
     {
@@ -35,7 +33,6 @@ namespace proof_of_concept.Domain.Models.Mapping
                         m.MapLeftKey("RoleId");
                         m.MapRightKey("UserId");
                     });
-
 
         }
     }

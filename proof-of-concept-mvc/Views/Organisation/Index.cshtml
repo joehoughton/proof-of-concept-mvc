@@ -1,6 +1,8 @@
-﻿@{
+﻿@using proof_of_concept.Domain.Organisation.Dto
+@{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml"; // render sections inside _LayoutInner
+    @model  OrganisationDto
 }
 
 @section HeaderContent { @Html.Partial("_HeaderPartial") }
@@ -8,5 +10,22 @@
 @section SideBar { @Html.Partial("_SidebarPartial")}
 
 @section ManageContent {
-    <h2>hello</h2>
+
+<div class="col-md-6 col-md-offset-3">
+    <form class="form-horizontal" id="organisation-detail">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <span class="form-control" id="Name">@Model.Name</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Type</label>
+            <div class="col-sm-10">
+                <span class="form-control" id="Type">@Model.Type</span>
+            </div>
+        </div>
+    </form>
+</div>
+
 }

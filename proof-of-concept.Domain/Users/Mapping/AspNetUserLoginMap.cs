@@ -1,7 +1,7 @@
-namespace proof_of_concept.Domain.Models.Mapping
+namespace proof_of_concept.Domain.Users.Mapping
 {
     using System.Data.Entity.ModelConfiguration;
-    using proof_of_concept.Models.Users.Models;
+    using proof_of_concept.Domain.Users.Models;
 
     public class AspNetUserLoginMap : EntityTypeConfiguration<AspNetUserLogin>
     {

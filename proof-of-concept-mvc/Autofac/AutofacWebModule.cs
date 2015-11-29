@@ -1,7 +1,7 @@
 ﻿namespace proof_of_concept_mvc.Autofac
 {
     using global::Autofac;
-    using proof_of_concept.Application.People;
+    using proof_of_concept.Application.Organisation;
 
     public class AutofacWebModule : Module
     {
@@ -12,7 +12,7 @@
             .AsImplementedInterfaces()
             .InstancePerLifetimeScope();
 
-            builder.RegisterType<PeopleService>().As<IPeopleService>().InstancePerRequest();
+            builder.RegisterType<OrganisationService>().As<IOrganisationService>().InstancePerRequest();
 
             base.Load(builder);
         }

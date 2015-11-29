@@ -1,6 +1,6 @@
-namespace proof_of_concept.Models.Users.Models
+namespace proof_of_concept.Domain.Users.Models
 {
-    public partial class AspNetUserLogin
+    public class AspNetUserLogin
     {
         public string LoginProvider { get; set; }
         public string ProviderKey { get; set; }

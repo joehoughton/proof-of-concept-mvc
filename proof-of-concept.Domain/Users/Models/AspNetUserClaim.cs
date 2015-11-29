@@ -1,6 +1,6 @@
-namespace proof_of_concept.Models.Users.Models
+namespace proof_of_concept.Domain.Users.Models
 {
-    public partial class AspNetUserClaim
+    public class AspNetUserClaim
     {
         public int Id { get; set; }
         public string UserId { get; set; }
