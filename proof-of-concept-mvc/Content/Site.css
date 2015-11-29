@@ -198,7 +198,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* Organisation Detail */
 #organisation-detail .form-control {
-    border: 0;
+    border: 0;  
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 #organisation-detail span {
