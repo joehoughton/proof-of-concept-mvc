@@ -391,7 +391,16 @@
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return View("Login");
+            return RedirectToAction("Login", "Account");
+        }
+
+        //
+        // GET: /Account/LogOff
+        [HttpGet]
+        public ActionResult LogOff(FormCollection c)
+        {
+            AuthenticationManager.SignOut();
+            return RedirectToAction("Login", "Account");
         }
 
         //
