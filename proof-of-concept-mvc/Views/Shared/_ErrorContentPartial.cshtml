@@ -1,4 +1,7 @@
 ﻿@using proof_of_concept_mvc.Helper
 <div id="error-message" style="display: none">
-    <ul>@Html.BootstrapValidationSummary(true, "Warning:")</ul>
+    <ul>
+        @Html.BootstrapValidationSummary(true, "Warning:") <!-- list of error messages -->
+        @if (TempData["success-message"] != null) { <li><i class='fa fa-check'></i> @TempData["success-message"]</li>  <!-- success message --> }
+    </ul>
 </div>

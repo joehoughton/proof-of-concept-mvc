@@ -38,10 +38,10 @@
             {
                 personViewModel.Id = User.Identity.GetUserId();
                 _userService.UpdateUserDetails(personViewModel);
+                TempData["success-message"] = "User details updated."; // used in _ErrorContentPartial - active for one redirect then destroyed
             } 
             catch (Exception)
             {
-                ViewBag.ErrorMessage = "Failed to update your details. Please try again.";
                 return View("Index", personViewModel);
             }
 

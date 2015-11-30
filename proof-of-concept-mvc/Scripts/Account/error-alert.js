@@ -1,7 +1,7 @@
 ﻿$("form").submit(function () {
   if (!$(this).valid()) {
     $('input').each(function (index, data) { // iterate through input fields
-      if ($(this).hasClass('input-validation-error')) { // check for class, if error exists add bootstrap validation class
+    if ($(this).hasClass('input-validation-error')) { // check for class, if error exists add bootstrap validation class
         $(this).parents('.form-group').addClass('has-error');
         $(this).addClass('text-danger');
         $('.has-error').removeClass('field-validation-error text-danger');
@@ -39,3 +39,10 @@ $("form").bind("invalid-form.validate", function (evt, validator) {
     }
   }
 });
+
+// display messages if list item exists
+if ($('#error-message ul li').length >= 1) {
+  $('#error-message').css('display', 'block'); // show error message
+} else {
+  $('#error-message').hide();
+}
