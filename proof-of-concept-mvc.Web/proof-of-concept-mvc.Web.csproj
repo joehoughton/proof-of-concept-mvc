@@ -265,11 +265,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\proof-of-concept.Application\proof-of-concept-mvc.Application.csproj">
+    <ProjectReference Include="..\proof-of-concept-mvc.Application\proof-of-concept-mvc.Application.csproj">
       <Project>{9a8751cf-2231-4dbb-b643-0ea92f19fd09}</Project>
       <Name>proof-of-concept-mvc.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\proof-of-concept.Domain\proof-of-concept-mvc.Domain.csproj">
+    <ProjectReference Include="..\proof-of-concept-mvc.Domain\proof-of-concept-mvc.Domain.csproj">
       <Project>{b85d5d9c-33f6-4840-8501-a5bf4e8765bf}</Project>
       <Name>proof-of-concept-mvc.Domain</Name>
     </ProjectReference>
