@@ -1,4 +1,4 @@
-namespace proof_of_concept.Domain.Users.Models
+namespace proof_of_concept_mvc.Domain.Users.Models
 {
     using System;
     using System.Collections.Generic;

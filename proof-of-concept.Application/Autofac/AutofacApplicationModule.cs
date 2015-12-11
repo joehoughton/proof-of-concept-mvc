@@ -1,4 +1,4 @@
-﻿namespace proof_of_concept.Application.Autofac
+﻿namespace proof_of_concept_mvc.Application.Autofac
 {
     using global::Autofac;
 

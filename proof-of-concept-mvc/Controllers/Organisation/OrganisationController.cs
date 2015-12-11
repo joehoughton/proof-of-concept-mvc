@@ -2,7 +2,8 @@
 {
     using System.Web.Mvc;
     using Microsoft.AspNet.Identity;
-    using proof_of_concept.Application.Organisation;
+
+    using proof_of_concept_mvc.Application.Organisation;
 
     [Authorize]
     public class OrganisationController : Controller

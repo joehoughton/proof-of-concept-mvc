@@ -1,4 +1,4 @@
-﻿namespace proof_of_concept.Domain.Users.Dto
+﻿namespace proof_of_concept_mvc.Domain.Users.Dto
 {
     using System.ComponentModel.DataAnnotations;
 

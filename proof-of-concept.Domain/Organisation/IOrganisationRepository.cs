@@ -1,6 +1,6 @@
-﻿namespace proof_of_concept.Domain.Organisation
+﻿namespace proof_of_concept_mvc.Domain.Organisation
 {
-    using proof_of_concept.Domain.Organisation.Dto;
+    using proof_of_concept_mvc.Domain.Organisation.Dto;
 
     public interface IOrganisationRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace proof_of_concept.Domain.Organisation.Dto
+﻿namespace proof_of_concept_mvc.Domain.Organisation.Dto
 {
     public class OrganisationDto
     {

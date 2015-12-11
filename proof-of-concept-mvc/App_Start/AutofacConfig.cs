@@ -3,9 +3,10 @@
     using System.Web.Mvc;
     using global::Autofac;
     using global::Autofac.Integration.Mvc;
-    using proof_of_concept.Application.Autofac;
-    using proof_of_concept.Domain.Autofac;
+
+    using proof_of_concept_mvc.Application.Autofac;
     using proof_of_concept_mvc.Autofac;
+    using proof_of_concept_mvc.Domain.Autofac;
 
     public class AutofacConfig
     {

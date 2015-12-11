@@ -1,8 +1,9 @@
 ﻿namespace proof_of_concept_mvc.Autofac
 {
     using global::Autofac;
-    using proof_of_concept.Application.Organisation;
-    using proof_of_concept.Application.Users;
+
+    using proof_of_concept_mvc.Application.Organisation;
+    using proof_of_concept_mvc.Application.Users;
 
     public class AutofacWebModule : Module
     {

@@ -1,8 +1,9 @@
-﻿namespace proof_of_concept.Domain.Users
+﻿namespace proof_of_concept_mvc.Domain.Users
 {
     using System.Linq;
-    using proof_of_concept.Domain.Data;
-    using proof_of_concept.Domain.Users.Dto;
+
+    using proof_of_concept_mvc.Domain.Data;
+    using proof_of_concept_mvc.Domain.Users.Dto;
 
     public class UserRepository : IUserRepository
     {
@@ -15,7 +16,7 @@
 
         public UserDetailDto GetUserDetails(string currentUserId)
         {
-        var userDetails = _context.UserDetails.Single(x => x.AspNetUser.Id == currentUserId);
+        var userDetails = this._context.UserDetails.Single(x => x.AspNetUser.Id == currentUserId);
 
          var userDetailsDto = new UserDetailDto(
              currentUserId,

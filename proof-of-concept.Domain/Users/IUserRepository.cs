@@ -1,6 +1,6 @@
-﻿namespace proof_of_concept.Domain.Users
+﻿namespace proof_of_concept_mvc.Domain.Users
 {
-    using proof_of_concept.Domain.Users.Dto;
+    using proof_of_concept_mvc.Domain.Users.Dto;
 
     public interface IUserRepository
     {

@@ -3,8 +3,8 @@
     using System;
     using System.Web.Mvc;
     using Microsoft.AspNet.Identity;
-    using proof_of_concept.Application.Users;
-    using proof_of_concept.Domain.Users.Dto;
+    using proof_of_concept_mvc.Application.Users;
+    using proof_of_concept_mvc.Domain.Users.Dto;
 
     [Authorize]
     public class UsersController : Controller

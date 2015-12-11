@@ -1,29 +1,30 @@
-namespace proof_of_concept.Domain.Users.Mapping
+namespace proof_of_concept_mvc.Domain.Users.Mapping
 {
     using System.Data.Entity.ModelConfiguration;
-    using proof_of_concept.Domain.Users.Models;
+
+    using proof_of_concept_mvc.Domain.Users.Models;
 
     public class AspNetUserClaimMap : EntityTypeConfiguration<AspNetUserClaim>
     {
         public AspNetUserClaimMap()
         {
             // Primary Key
-            this.HasKey(t => t.Id);
+            HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.UserId)
+            Property(t => t.UserId)
                 .IsRequired()
                 .HasMaxLength(128);
 
             // Table & Column Mappings
-            this.ToTable("AspNetUserClaims");
-            this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.UserId).HasColumnName("UserId");
-            this.Property(t => t.ClaimType).HasColumnName("ClaimType");
-            this.Property(t => t.ClaimValue).HasColumnName("ClaimValue");
+            ToTable("AspNetUserClaims");
+            Property(t => t.Id).HasColumnName("Id");
+            Property(t => t.UserId).HasColumnName("UserId");
+            Property(t => t.ClaimType).HasColumnName("ClaimType");
+            Property(t => t.ClaimValue).HasColumnName("ClaimValue");
 
             // Relationships
-            this.HasRequired(t => t.AspNetUser)
+            HasRequired(t => t.AspNetUser)
                 .WithMany(t => t.AspNetUserClaims)
                 .HasForeignKey(d => d.UserId);
 

@@ -1,9 +1,10 @@
-﻿namespace proof_of_concept.Domain.Organisation
+﻿namespace proof_of_concept_mvc.Domain.Organisation
 {
-    using System.Linq;
     using System.Data.Entity;
-    using proof_of_concept.Domain.Data;
-    using proof_of_concept.Domain.Organisation.Dto;
+    using System.Linq;
+
+    using proof_of_concept_mvc.Domain.Data;
+    using proof_of_concept_mvc.Domain.Organisation.Dto;
 
     class OrganisationRepository : IOrganisationRepository
     {
@@ -16,7 +17,7 @@
 
         public OrganisationDto GetByUserId(string currentUserId)
         {
-             var userOrganisation = _context.UserDetails
+             var userOrganisation = this._context.UserDetails
             .Include(o => o.Organisation)
             .Single(o => o.AspNetUser.Id == currentUserId).Organisation;
 

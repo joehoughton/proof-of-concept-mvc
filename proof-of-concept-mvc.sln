@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proof-of-concept-mvc.Web", "proof-of-concept-mvc\proof-of-concept-mvc.Web.csproj", "{7A0A6B82-775D-4DF9-9FED-2CBED4821C05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proof-of-concept.Application", "proof-of-concept.Application\proof-of-concept.Application.csproj", "{9A8751CF-2231-4DBB-B643-0EA92F19FD09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proof-of-concept-mvc.Application", "proof-of-concept.Application\proof-of-concept-mvc.Application.csproj", "{9A8751CF-2231-4DBB-B643-0EA92F19FD09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proof-of-concept.Domain", "proof-of-concept.Domain\proof-of-concept.Domain.csproj", "{B85D5D9C-33F6-4840-8501-A5BF4E8765BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proof-of-concept-mvc.Domain", "proof-of-concept.Domain\proof-of-concept-mvc.Domain.csproj", "{B85D5D9C-33F6-4840-8501-A5BF4E8765BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-namespace proof_of_concept.Domain.Organisation.Models
+namespace proof_of_concept_mvc.Domain.Organisation.Models
 {
     public class OrganisationType
     {

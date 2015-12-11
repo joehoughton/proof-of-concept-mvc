@@ -1,7 +1,7 @@
-﻿namespace proof_of_concept.Application.Users
+﻿namespace proof_of_concept_mvc.Application.Users
 {
-    using proof_of_concept.Domain.Users;
-    using proof_of_concept.Domain.Users.Dto;
+    using proof_of_concept_mvc.Domain.Users;
+    using proof_of_concept_mvc.Domain.Users.Dto;
 
     public class UserService : IUserService
     {
@@ -14,7 +14,7 @@
 
         public UserDetailDto GetUserDetails(string currentUserId)
         {
-            var result = _userRepository.GetUserDetails(currentUserId);
+            var result = this._userRepository.GetUserDetails(currentUserId);
             return result;
         }
 

@@ -1,6 +1,6 @@
-namespace proof_of_concept.Domain.Users.Models
+namespace proof_of_concept_mvc.Domain.Users.Models
 {
-    using proof_of_concept.Domain.Organisation.Models;
+    using proof_of_concept_mvc.Domain.Organisation.Models;
 
     public class UserDetail
     {

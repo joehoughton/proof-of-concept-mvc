@@ -1,7 +1,8 @@
-namespace proof_of_concept.Domain.Organisation.Mappings
+namespace proof_of_concept_mvc.Domain.Organisation.Mappings
 {
     using System.Data.Entity.ModelConfiguration;
-    using proof_of_concept.Domain.Organisation.Models;
+
+    using proof_of_concept_mvc.Domain.Organisation.Models;
 
     public class OrganisationMap : EntityTypeConfiguration<Organisation>
     {

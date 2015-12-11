@@ -1,31 +1,32 @@
-namespace proof_of_concept.Domain.Users.Mapping
+namespace proof_of_concept_mvc.Domain.Users.Mapping
 {
     using System.Data.Entity.ModelConfiguration;
-    using proof_of_concept.Domain.Users.Models;
+
+    using proof_of_concept_mvc.Domain.Users.Models;
 
     public class AspNetRoleMap : EntityTypeConfiguration<AspNetRole>
     {
         public AspNetRoleMap()
         {
             // Primary Key
-            this.HasKey(t => t.Id);
+            HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
+            Property(t => t.Id)
                 .IsRequired()
                 .HasMaxLength(128);
 
-            this.Property(t => t.Name)
+            Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(256);
 
             // Table & Column Mappings
-            this.ToTable("AspNetRoles");
-            this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.Name).HasColumnName("Name");
+            ToTable("AspNetRoles");
+            Property(t => t.Id).HasColumnName("Id");
+            Property(t => t.Name).HasColumnName("Name");
 
             // Relationships
-            this.HasMany(t => t.AspNetUsers)
+            HasMany(t => t.AspNetUsers)
                 .WithMany(t => t.AspNetRoles)
                 .Map(m =>
                     {

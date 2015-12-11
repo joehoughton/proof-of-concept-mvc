@@ -1,10 +1,11 @@
-namespace proof_of_concept.Domain.Data
+namespace proof_of_concept_mvc.Domain.Data
 {
     using System.Data.Entity;
-    using proof_of_concept.Domain.Organisation.Mappings;
-    using proof_of_concept.Domain.Organisation.Models;
-    using proof_of_concept.Domain.Users.Mapping;
-    using proof_of_concept.Domain.Users.Models;
+
+    using proof_of_concept_mvc.Domain.Organisation.Mappings;
+    using proof_of_concept_mvc.Domain.Organisation.Models;
+    using proof_of_concept_mvc.Domain.Users.Mapping;
+    using proof_of_concept_mvc.Domain.Users.Models;
 
     public class SparebedsContext : DbContext
     {
@@ -29,13 +30,13 @@ namespace proof_of_concept.Domain.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-        modelBuilder.Configurations.Add(new AspNetRoleMap());
-        modelBuilder.Configurations.Add(new AspNetUserClaimMap());
-        modelBuilder.Configurations.Add(new AspNetUserLoginMap());
-        modelBuilder.Configurations.Add(new AspNetUserMap());
-        modelBuilder.Configurations.Add(new OrganisationMap());
-        modelBuilder.Configurations.Add(new OrganisationTypeMap());
-        modelBuilder.Configurations.Add(new UserDetailMap());
+            modelBuilder.Configurations.Add(new AspNetRoleMap());
+            modelBuilder.Configurations.Add(new AspNetUserClaimMap());
+            modelBuilder.Configurations.Add(new AspNetUserLoginMap());
+            modelBuilder.Configurations.Add(new AspNetUserMap());
+            modelBuilder.Configurations.Add(new OrganisationMap());
+            modelBuilder.Configurations.Add(new OrganisationTypeMap());
+            modelBuilder.Configurations.Add(new UserDetailMap());
         }
     }
 }

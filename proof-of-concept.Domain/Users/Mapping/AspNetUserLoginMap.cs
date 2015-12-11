@@ -1,36 +1,37 @@
-namespace proof_of_concept.Domain.Users.Mapping
+namespace proof_of_concept_mvc.Domain.Users.Mapping
 {
     using System.Data.Entity.ModelConfiguration;
-    using proof_of_concept.Domain.Users.Models;
+
+    using proof_of_concept_mvc.Domain.Users.Models;
 
     public class AspNetUserLoginMap : EntityTypeConfiguration<AspNetUserLogin>
     {
         public AspNetUserLoginMap()
         {
             // Primary Key
-            this.HasKey(t => new { t.LoginProvider, t.ProviderKey, t.UserId });
+            HasKey(t => new { t.LoginProvider, t.ProviderKey, t.UserId });
 
             // Properties
-            this.Property(t => t.LoginProvider)
+            Property(t => t.LoginProvider)
                 .IsRequired()
                 .HasMaxLength(128);
 
-            this.Property(t => t.ProviderKey)
+            Property(t => t.ProviderKey)
                 .IsRequired()
                 .HasMaxLength(128);
 
-            this.Property(t => t.UserId)
+            Property(t => t.UserId)
                 .IsRequired()
                 .HasMaxLength(128);
 
             // Table & Column Mappings
-            this.ToTable("AspNetUserLogins");
-            this.Property(t => t.LoginProvider).HasColumnName("LoginProvider");
-            this.Property(t => t.ProviderKey).HasColumnName("ProviderKey");
-            this.Property(t => t.UserId).HasColumnName("UserId");
+            ToTable("AspNetUserLogins");
+            Property(t => t.LoginProvider).HasColumnName("LoginProvider");
+            Property(t => t.ProviderKey).HasColumnName("ProviderKey");
+            Property(t => t.UserId).HasColumnName("UserId");
 
             // Relationships
-            this.HasRequired(t => t.AspNetUser)
+            HasRequired(t => t.AspNetUser)
                 .WithMany(t => t.AspNetUserLogins)
                 .HasForeignKey(d => d.UserId);
 

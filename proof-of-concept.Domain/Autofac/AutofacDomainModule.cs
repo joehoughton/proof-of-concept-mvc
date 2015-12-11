@@ -1,10 +1,12 @@
-﻿namespace proof_of_concept.Domain.Autofac
+﻿namespace proof_of_concept_mvc.Domain.Autofac
     {
-    using System.Configuration;
-    using global::Autofac;
-    using proof_of_concept.Domain.Data;
+        using System.Configuration;
 
-    public class AutofacDomainModule : Module
+        using global::Autofac;
+
+        using proof_of_concept_mvc.Domain.Data;
+
+        public class AutofacDomainModule : Module
         {
         protected override void Load(ContainerBuilder builder)
             {
