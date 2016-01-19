@@ -3,24 +3,24 @@
     using System;
     using System.Web.Mvc;
     using Microsoft.AspNet.Identity;
-    using proof_of_concept_mvc.Application.Users;
+    using proof_of_concept_mvc.Domain.Users;
     using proof_of_concept_mvc.Domain.Users.Dto;
 
     [Authorize]
     public class UsersController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly IUserRepository _userRepository;
 
-        public UsersController(IUserService userService)
+        public UsersController(IUserRepository userRepository)
         {
-            _userService = userService;
+            _userRepository = userRepository;
         }
 
         // GET: Users
         public ActionResult Index()
         {
             string currentUserId = User.Identity.GetUserId();
-            var userDetails = _userService.GetUserDetails(currentUserId);
+            var userDetails = _userRepository.GetUserDetails(currentUserId);
             return View(userDetails);
         }
 
@@ -37,7 +37,7 @@
             try
             {
                 personViewModel.Id = User.Identity.GetUserId();
-                _userService.UpdateUserDetails(personViewModel);
+                _userRepository.UpdateUserDetails(personViewModel);
                 TempData["success-message"] = "User details updated."; // used in _ErrorContentPartial - active for one redirect then destroyed
             } 
             catch (Exception)

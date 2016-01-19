@@ -2,24 +2,23 @@
 {
     using System.Web.Mvc;
     using Microsoft.AspNet.Identity;
-
-    using proof_of_concept_mvc.Application.Organisation;
+    using proof_of_concept_mvc.Domain.Organisation;
 
     [Authorize]
     public class OrganisationController : Controller
     {
-        private readonly IOrganisationService _organisationService;
+        private readonly IOrganisationRepository _organisationRepository;
 
-        public OrganisationController(IOrganisationService organisationService)
+        public OrganisationController(IOrganisationRepository organisationRepository)
         {
-            _organisationService = organisationService;
+            _organisationRepository = organisationRepository;
         }
 
         // GET: Organisation
         public ActionResult Index()
         {
             string currentUserId = User.Identity.GetUserId();
-            var organisation = _organisationService.GetUserOrganisation(currentUserId);
+            var organisation = _organisationRepository.GetByUserId(currentUserId);
             return View(organisation);
         }
 

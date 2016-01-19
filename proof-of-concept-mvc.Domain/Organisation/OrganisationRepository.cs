@@ -6,7 +6,7 @@
     using proof_of_concept_mvc.Domain.Data;
     using proof_of_concept_mvc.Domain.Organisation.Dto;
 
-    class OrganisationRepository : IOrganisationRepository
+    public class OrganisationRepository : IOrganisationRepository
     {
         private readonly SparebedsContext _context;
 

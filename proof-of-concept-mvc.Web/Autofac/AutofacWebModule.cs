@@ -2,8 +2,8 @@
 {
     using global::Autofac;
 
-    using proof_of_concept_mvc.Application.Organisation;
-    using proof_of_concept_mvc.Application.Users;
+    using proof_of_concept_mvc.Domain.Organisation;
+    using proof_of_concept_mvc.Domain.Users;
 
     public class AutofacWebModule : Module
     {
@@ -14,8 +14,8 @@
             .AsImplementedInterfaces()
             .InstancePerLifetimeScope();
 
-            builder.RegisterType<OrganisationService>().As<IOrganisationService>().InstancePerRequest();
-            builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
+            builder.RegisterType<OrganisationRepository>().As<IOrganisationRepository>().InstancePerRequest();
+            builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
 
             base.Load(builder);
         }
