@@ -38,7 +38,7 @@
             {
                 personViewModel.Id = User.Identity.GetUserId();
                 _userRepository.UpdateUserDetails(personViewModel);
-                TempData["success-message"] = "User details updated."; // used in _ErrorContentPartial - active for one redirect then destroyed
+                TempData["success-message"] = "Account details have been saved."; // used in _ErrorContentPartial - active for one redirect then destroyed
             } 
             catch (Exception)
             {
