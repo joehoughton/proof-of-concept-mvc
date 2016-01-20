@@ -166,10 +166,6 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #6B6B6B;
 }
 
-#manage-nav {
-    color: black;
-}
-
 .disabled {
     opacity: 0.4;
 }
